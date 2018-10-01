@@ -1,0 +1,13 @@
+import pandas as pd
+import tensorflow as tf
+import numpy as np
+import keras
+
+def read_csv(csv_name):
+	return pd.read_csv(csv_name, sep=',', header=None)
+
+df_test = read_csv("D:\\Camila Leite\\Movelets Foursquare\\Experimentos\\results\\11_week\\MoveletsSize10NewDatasetWithRandomness\\Movelets\\newfour8_ED\\new_freq_test.csv.csv", header=False) 
+df_train = read_csv("D:\\Camila Leite\\Movelets Foursquare\\Experimentos\\results\\11_week\\MoveletsSize10NewDatasetWithRandomness\\Movelets\\newfour8_ED\\new_freq_train.csv.csv", header=False)
+
+df_test.drop(0)
+df_train.drop(0)
